@@ -1,7 +1,7 @@
 {
   // Cloudflare Worker + Static Assets — เสิร์ฟผลลัพธ์ build ของ Vite (โฟลเดอร์ dist)
   // ใช้กับ deploy command: npx wrangler deploy
-  "name": "qr-coed-guard",
+  "name": "qr-coed-guard-bp",
   "compatibility_date": "2026-09-05",
 
   // Worker หน้าด่านสำหรับใส่รหัสผ่าน (ใช้แทน Cloudflare Access ที่เป็นบริการเสียเงิน)
