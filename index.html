@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ระบบเดินตรวจ รปภ. (Guard Patrol)</title>
+    <meta name="description" content="ระบบบันทึกและตรวจสอบการเดินตรวจ รปภ. โรงงานอาหารสัตว์ CPF ธารเกษม สระบุรี" />
+    <meta property="og:title" content="ระบบเดินตรวจ รปภ. (Guard Patrol)" />
+    <meta property="og:description" content="ระบบบันทึกและตรวจสอบการเดินตรวจ รปภ. โรงงานอาหารสัตว์ CPF ธารเกษม สระบุรี" />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- ติดตั้งลงหน้าจอโฮมของมือถือ รปภ. ได้ และเปิดใช้ต่อได้ตอนไม่มีสัญญาณ -->
+    <!-- crossorigin="use-credentials" จำเป็น เพราะเว็บอยู่หลังรหัสผ่านของ Worker
+         ค่าเริ่มต้นของเบราว์เซอร์คือดึง manifest แบบไม่แนบรหัสผ่าน แล้วจะได้ 401
+         ทำให้ติดตั้งลงหน้าจอโฮมไม่ได้ -->
+    <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials" />
+    <meta name="theme-color" content="#1D4ED8" />
+    <link rel="icon" href="/icons/icon-192.png" type="image/png" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="เดินตรวจ รปภ." />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Thai+Looped:wght@400;500;600;700&family=IBM+Plex+Sans+Thai:wght@400;500;600;700&display=swap" rel="stylesheet">
+  </head>
+  <body class="font-['IBM_Plex_Sans_Thai_Looped',sans-serif] antialiased bg-[#F8FAFC] text-[#1E293B]">
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
+

@@ -1,0 +1,9 @@
+{
+  "name": "ระบบเดินตรวจ รปภ. (Guard Patrol)",
+  "description": "ระบบบันทึกและตรวจสอบการเดินตรวจ รปภ.  โรงงานอาหารสัตว์ CPF ธารเกษม สระบุรี",
+  "requestFramePermissions": [
+    "geolocation",
+    "camera"
+  ],
+  "majorCapabilities": []
+}

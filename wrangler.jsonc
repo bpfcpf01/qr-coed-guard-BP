@@ -1,0 +1,22 @@
+{
+  // Cloudflare Worker + Static Assets — เสิร์ฟผลลัพธ์ build ของ Vite (โฟลเดอร์ dist)
+  // ใช้กับ deploy command: npx wrangler deploy
+  "name": "qr-coed-guard",
+  "compatibility_date": "2026-09-05",
+
+  // Worker หน้าด่านสำหรับใส่รหัสผ่าน (ใช้แทน Cloudflare Access ที่เป็นบริการเสียเงิน)
+  // ตั้ง secret SITE_USER / SITE_PASS ใน dashboard เพื่อเปิดใช้งาน
+  // ถ้าไม่ตั้ง จะปล่อยผ่านตามปกติ
+  "main": "worker/index.js",
+
+  "assets": {
+    "directory": "./dist",
+    "binding": "ASSETS",
+    // ค่าเริ่มต้นของ Static Assets คือเสิร์ฟไฟล์ตรงจาก edge โดยข้าม Worker
+    // ทำให้โค้ดตรวจรหัสผ่านไม่เคยถูกเรียก ต้องบังคับให้ Worker ทำงานก่อนทุกคำขอ
+    "run_worker_first": true,
+    // แอปใช้ query param (?cp=, ?page=) ไม่ใช่ path routing
+    // แต่ตั้ง SPA ไว้กันกรณีเปิด path ที่ไม่มีไฟล์จริง
+    "not_found_handling": "single-page-application"
+  }
+}

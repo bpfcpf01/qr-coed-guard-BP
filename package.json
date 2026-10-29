@@ -1,0 +1,38 @@
+{
+  "name": "guard-patrol",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port=3000 --host=0.0.0.0",
+    "build": "vite build",
+    "preview": "vite preview",
+    "clean": "rm -rf dist",
+    "lint": "tsc --noEmit",
+    "test:appsscript": "node test/appsScript.test.cjs",
+    "test:worker": "node test/workerHealth.test.mjs",
+    "test": "npm run lint && npm run test:roster && npm run test:appsscript && npm run test:worker && npm run test:sw",
+    "test:sw": "node test/serviceWorker.test.mjs",
+    "icons": "node scripts/make-icons.mjs",
+    "test:roster": "node --experimental-strip-types test/rosterRules.test.mts"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.14",
+    "@vitejs/plugin-react": "^5.0.4",
+    "html5-qrcode": "^2.3.8",
+    "lucide-react": "^0.546.0",
+    "motion": "^12.23.24",
+    "qrcode": "^1.5.4",
+    "react": "^19.0.1",
+    "react-dom": "^19.0.1",
+    "vite": "^6.2.3"
+  },
+  "devDependencies": {
+    "@types/node": "^22.14.0",
+    "@types/qrcode": "^1.5.6",
+    "autoprefixer": "^10.4.21",
+    "tailwindcss": "^4.1.14",
+    "typescript": "~5.8.2",
+    "vite": "^6.2.3"
+  }
+}

@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-canvas: #F8FAFC;
+    --text-primary: #1E293B;
+    --text-secondary: #64748B;
+    --text-muted: #94A3B8;
+    --accent-blue: #2563EB;
+    --accent-blue-light: #EFF6FF;
+    --border-subtle: #E2E8F0;
+    --border-light: #F1F5F9;
+    --ok: #10B981;
+    --warn: #F59E0B;
+    --bad: #EF4444;
+  }
+
+  body {
+    background-color: #F8FAFC;
+    color: #1E293B;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'IBM Plex Sans Thai', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+@media print {
+  .noprint {
+    display: none !important;
+  }
+  .print-only {
+    display: block !important;
+  }
+  body {
+    background: #ffffff !important;
+    font-size: 11.5px !important;
+    color: #000000 !important;
+  }
+  table, .print-box {
+    border: 1px solid #cbd5e1 !important;
+    page-break-inside: avoid;
+  }
+  th {
+    background: #f1f5f9 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .print-exact {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}
